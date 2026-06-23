@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shared Shop - Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <canvas id="magic-canvas"></canvas>
+
+    <nav>
+        <span class="nav-logo">Shared Shop</span>
+        <ul class="nav-links">
+            <li><a href="#features">機能一覧</a></li>
+            <li><a href="#screenshots">画面ギャラリー</a></li>
+            <li><a href="#stack">技術スタック</a></li>
+            <li><a href="#architecture">システム設計</a></li>
+            <li><a href="#roles">権限管理</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-label">━ Spring Boot &times; Thymeleaf ━</p>
+            <h1 class="hero-title">Shared Shop<br />Application</h1>
+            <p class="hero-subtitle">〜 ECサイト構築プロジェクト 〜</p>
+            <div class="hero-divider"></div>
+            <p class="hero-desc">
+                ECサイトに必要な基本機能を網羅した実践的なWebアプリケーションです。<br />
+                堅牢なMVCアーキテクチャ、独自アノテーションによるバリデーション、<br />
+                そしてユーザーに直感的な購買体験を提供するUIを統合しました。
+            </p>
+            <div class="btn-group">
+                <a href="#screenshots" class="btn btn-primary">実際の画面を見る</a>
+                <a href="#features" class="btn btn-secondary">実装機能を確認する</a>
+            </div>
+        </div>
+
+        <div class="spellbook-widget">
+            <div class="widget-header">
+                <span class="widget-title">Source Code Structure</span>
+            </div>
+            <div class="widget-body">
+                <div><span class="c-dir">jp.co.sss.shop</span></div>
+                <div><span class="tree-indent">├─</span><span class="c-dir">controller/</span> <span class="c-muted">MVCルーティング</span></div>
+                <div><span class="tree-indent">│ ├─</span><span class="c-dir">admin/</span> <span class="c-muted">管理者向け機能</span></div>
+                <div><span class="tree-indent">│ └─</span><span class="c-dir">client/</span> <span class="c-muted">一般顧客向け機能</span></div>
+                <div><span class="tree-indent">├─</span><span class="c-dir">entity/</span> <span class="c-file">User, Item, Order...</span></div>
+                <div><span class="tree-indent">├─</span><span class="c-dir">filter/</span> <span class="c-muted">権限チェック処理</span></div>
+                <div><span class="tree-indent">├─</span><span class="c-dir">validator/</span> <span class="c-muted">カスタムアノテーション</span></div>
+                <div><span class="tree-indent">└─</span><span class="c-green">SharedShopApplication.java</span><span class="cursor"></span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="section-inner">
+            <h2 class="section-title"><span>✧</span> 機能一覧 <span>✧</span></h2>
+            <p class="section-desc">サービスを支える堅牢なバックエンドと使いやすいUI機能です。</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card parchment">
+                    <div class="feature-icon">👜</div>
+                    <h3>スマートな買い物かご</h3>
+                    <p>セッションを利用したカート管理。購入数変更時に、DBの最新在庫と突き合わせて自動調整する安全設計です。</p>
+                </div>
+                <div class="feature-card parchment">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>アカウントロック機能</h3>
+                    <p>連続ログイン失敗時にアカウントを自動ロック。メモリ内でスレッドセーフに管理し、不正なアクセスを防ぎます。</p>
+                </div>
+                <div class="feature-card parchment">
+                    <div class="feature-icon">🦉</div>
+                    <h3>多段階の注文フロー</h3>
+                    <p>お届け先入力 → 支払方法 → 確認 → 完了のフロー。注文確定直前の「2段階在庫チェック」で在庫超過を徹底排除します。</p>
+                </div>
+                <div class="feature-card parchment">
+                    <div class="feature-icon">🔮</div>
+                    <h3>動的な検索・ソート</h3>
+                    <p>カテゴリ絞り込みに加え、「新着順」「売れ筋順」での表示切り替えを実装。サブクエリを用いた高度なJPQLを活用しています。</p>
+                </div>
+                <div class="feature-card parchment">
+                    <div class="feature-icon">📜</div>
+                    <h3>AIチャットボット連携</h3>
+                    <p>ユーザーの曖昧な入力キーワードの揺らぎを吸収し、100種類以上の商品データから最適な提案を行うUIを搭載しています。</p>
+                </div>
+                <div class="feature-card parchment">
+                    <div class="feature-icon">🖋️</div>
+                    <h3>カスタムバリデーション</h3>
+                    <p>@EmailCheckや@ItemCheckなど独自アノテーションを作成。DBと連携した重複チェックをスマートに実装しています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots" class="bg-darker">
+        <div class="section-inner">
+            <h2 class="section-title"><span>✧</span> 画面ギャラリー <span>✧</span></h2>
+            <p class="section-desc">クリックで画像を拡大表示します。</p>
+            
+            <div class="screenshot-grid">
+                <div class="screenshot-card portrait-frame" onclick="openModal(this)">
+                    <img class="screenshot-img" src="images/screen-top.png" alt="トップ画面" onerror="this.src='https://placehold.co/600x400/2c1e16/cfb53b?text=Top+Page'" />
+                    <div class="screenshot-caption">トップ画面（新着・売れ筋一覧）</div>
+                </div>
+                <div class="screenshot-card portrait-frame" onclick="openModal(this)">
+                    <img class="screenshot-img" src="images/screen-detail.png" alt="商品詳細画面" onerror="this.src='https://placehold.co/600x400/2c1e16/cfb53b?text=Item+Detail'" />
+                    <div class="screenshot-caption">商品詳細・カート追加通知</div>
+                </div>
+                <div class="screenshot-card portrait-frame" onclick="openModal(this)">
+                    <img class="screenshot-img" src="images/screen-ai.png" alt="AIアシスタント" onerror="this.src='https://placehold.co/600x400/2c1e16/cfb53b?text=AI+Assistant'" />
+                    <div class="screenshot-caption">AIチャットボットUI</div>
+                </div>
+                <div class="screenshot-card portrait-frame" onclick="openModal(this)">
+                    <img class="screenshot-img" src="images/screen-admin.png" alt="管理者メニュー" onerror="this.src='https://placehold.co/600x400/2c1e16/cfb53b?text=Admin+Dashboard'" />
+                    <div class="screenshot-caption">バックエンド管理ダッシュボード</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stack">
+        <div class="section-inner">
+            <h2 class="section-title"><span>✧</span> 技術スタック <span>✧</span></h2>
+            <p class="section-desc">実践的で安定したJava/Springエコシステムを活用しています。</p>
+            
+            <div class="stack-groups">
+                <div class="stack-group">
+                    <h4>Backend</h4>
+                    <div class="badge-list">
+                        <span class="badge highlight">Java 17</span>
+                        <span class="badge highlight">Spring Boot</span>
+                        <span class="badge">Spring MVC</span>
+                        <span class="badge">Spring Data JPA</span>
+                        <span class="badge">Bean Validation</span>
+                        <span class="badge">Servlet Filter</span>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <h4>Frontend</h4>
+                    <div class="badge-list">
+                        <span class="badge highlight">Thymeleaf</span>
+                        <span class="badge">HTML5</span>
+                        <span class="badge">CSS3</span>
+                        <span class="badge">Vanilla JS</span>
+                        <span class="badge">jQuery</span>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <h4>Database & Data Management</h4>
+                    <div class="badge-list">
+                        <span class="badge highlight">Oracle Database</span>
+                        <span class="badge">Sequence Generator</span>
+                        <span class="badge">Soft Delete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="architecture" class="bg-darker">
+        <div class="section-inner">
+            <h2 class="section-title"><span>✧</span> システム設計 <span>✧</span></h2>
+            <p class="section-desc">保守性が高く、堅牢なシステムを構築するための設計パターンを採用しています。</p>
+            
+            <div class="arch-grid">
+                <div class="arch-cell parchment">
+                    <p class="arch-cell-label">Post-Redirect-Get</p>
+                    <h4>二重送信対策 (PRGパターン)</h4>
+                    <p>POST処理の完了後は、必ずリダイレクト（GET）で完了画面へ遷移させ、ブラウザバックによるデータの多重登録を防止しています。</p>
+                </div>
+                <div class="arch-cell parchment">
+                    <p class="arch-cell-label">Data Transfer Object</p>
+                    <h4>レイヤー間の疎結合化</h4>
+                    <p>Web入力(Form)、DB操作(Entity)、画面表示(Bean)のクラスを明確に分離。BeanToolsで変換を集約し、不正なパラメータの混入を防ぎます。</p>
+                </div>
+                <div class="arch-cell parchment">
+                    <p class="arch-cell-label">Data Integrity</p>
+                    <h4>論理削除と履歴の保持</h4>
+                    <p>商品や会員が削除されてもレコードを消すのではなく「削除フラグ」を立てる論理削除を採用。過去の注文履歴との参照整合性を維持しています。</p>
+                </div>
+                <div class="arch-cell parchment">
+                    <p class="arch-cell-label">Dynamic Calculation</p>
+                    <h4>購入時単価の保持</h4>
+                    <p>商品の価格が変動しても過去の決済額が変わらないよう、OrderItemテーブルには注文確定時点の単価をコピーして保持する仕組みを取っています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roles">
+        <div class="section-inner">
+            <h2 class="section-title"><span>✧</span> 権限管理 <span>✧</span></h2>
+            <p class="section-desc">HttpFilterを活用し、URLレベルでの厳格なアクセス制御を実施しています。</p>
+            
+            <div class="role-table-wrapper parchment">
+                <table class="role-table">
+                    <thead>
+                        <tr>
+                            <th>機能</th>
+                            <th><span class="role-pill role-client">一般会員</span></th>
+                            <th><span class="role-pill role-admin">運用管理者</span></th>
+                            <th><span class="role-pill role-system">システム管理者</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>商品一覧・詳細の閲覧</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td>買い物かご・注文処理</td>
+                            <td class="check">✓</td>
+                            <td class="cross">制限</td>
+                            <td class="cross">制限</td>
+                        </tr>
+                        <tr>
+                            <td>マイページ（情報管理）</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td>商品・カテゴリの登録/編集</td>
+                            <td class="cross">制限</td>
+                            <td class="check">✓</td>
+                            <td class="cross">制限</td>
+                        </tr>
+                        <tr>
+                            <td>全ユーザーの注文履歴管理</td>
+                            <td class="cross">制限</td>
+                            <td class="check">✓</td>
+                            <td class="cross">制限</td>
+                        </tr>
+                        <tr>
+                            <td>全会員のアカウント管理</td>
+                            <td class="cross">制限</td>
+                            <td class="check">✓ (一部制限)</td>
+                            <td class="check">✓ (全権限)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>✦ Shared Shop Application - Portfolio ✦</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #8b7355;">Built with Java & Spring Boot.</p>
+    </footer>
+
+    <div class="modal" id="modal">
+        <div class="modal-content portrait-frame">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <img class="modal-img" id="modal-img" src="" alt="" />
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
