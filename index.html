@@ -206,8 +206,8 @@
                 </div>
                 <div class="arch-cell parchment">
                     <p class="arch-cell-label">Data Transfer Object</p>
-                    <h4>レイヤー間の疎結合化</h4>
-                    <p>Web入力(Form)、DB操作(Entity)、画面表示(Bean)のクラスを明確に分離。BeanToolsで変換を集約し、不正なパラメータの混入を防ぎます。</p>
+                    <h4>役割の明確な分離</h4>
+                    <p>「Webからの入力(Form)」「データベース操作(Entity)」「画面への表示(Bean)」など、層ごとに扱うデータを専用のクラスに分割しています。</p>
                 </div>
                 <div class="arch-cell parchment">
                     <p class="arch-cell-label">Data Integrity</p>
@@ -219,6 +219,11 @@
                     <h4>購入時単価の保持</h4>
                     <p>商品の価格が変動しても過去の決済額が変わらないよう、OrderItemテーブルには注文確定時点の単価をコピーして保持する仕組みを取っています。</p>
                 </div>
+                <div class="arch-cell parchment">
+    <p class="arch-cell-label">Exception Handling</p>
+    <h4>共通エラーハンドリング</h4>
+    <p>予期せぬシステムエラーやデータベースの接続障害が発生した際、システム内部の構造（スタックトレース等）を画面に露出させず、安全な共通エラーページへ誘導する仕組みを導入しています。</p>
+</div>
             </div>
         </div>
     </section>
@@ -252,7 +257,7 @@
                             <td class="cross">制限</td>
                         </tr>
                         <tr>
-                            <td>マイページ（情報管理）</td>
+                            <td>会員情報（マイページ）</td>
                             <td class="check">✓</td>
                             <td class="check">✓</td>
                             <td class="check">✓</td>
@@ -264,7 +269,7 @@
                             <td class="cross">制限</td>
                         </tr>
                         <tr>
-                            <td>全ユーザーの注文履歴管理</td>
+                            <td>全会員の注文履歴管理</td>
                             <td class="cross">制限</td>
                             <td class="check">✓</td>
                             <td class="cross">制限</td>
